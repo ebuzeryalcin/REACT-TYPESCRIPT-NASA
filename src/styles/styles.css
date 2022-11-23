@@ -4,3 +4,9 @@
     overflow: hidden;
     display: -webkit-box;
   }
+.title-style {
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    display: -webkit-box;
+  }

@@ -3,11 +3,13 @@ import { Divider, Grid, Typography } from "@mui/material"
 function Head() {
   return (
     <>
-    <Grid direction={'column'}>
-      <Grid marginBottom={3}>
+    <Grid container>
+      <Grid minWidth='269px' marginBottom={3}>
         <Typography variant="h5">NASA Image Explorer</Typography>
       </Grid>
-      <Divider />
+      <Grid>
+        <Divider />
+      </Grid>
     </Grid>
     </>
   )

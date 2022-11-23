@@ -2,11 +2,25 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { CardActionArea, Grid } from '@mui/material';
+import { CardActionArea, createTheme, Grid } from '@mui/material';
 import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom';
 import useFetch from "../hooks/UseFetch";
 import '../styles/styles.css';
+import { ThemeProvider } from "@emotion/react";
+
+const theme = createTheme({
+  breakpoints: {
+    values: {
+      xs: 300,
+      sm: 678,
+      md: 999,
+      lg: 1200,
+      xl: 1536,
+    },
+  },
+});
+
 
 interface PostData{
   items: Item[], //1
@@ -54,14 +68,19 @@ export default function MediaCard() {
 
   return (
     <>
-    <Grid container spacing={2}>
+    <ThemeProvider theme={theme}>
       {data && data.items.map((item, i) => (
-
-        <Link  to={`/Detailed/${item.data[0].nasa_id}`}
+        
+        <Link to={`/Detailed/${item.data[0].nasa_id}`}
         state={{nasaItem: item}}
         style={{ textDecoration: "none" }} 
         key={item && item.data[0].nasa_id}>
-          <Card sx={{ maxWidth: 364, height: 495, mt: 1, ml: 4, mb: 2 }}>
+        <Grid container item
+          xs={12} sm={6} md={4} 
+          sx={{ display: 'inline-block' }}
+        >
+          <Grid item>
+          <Card sx={{ minWidth: '250px', minHeight: 455, m:1 }}>
             <CardActionArea onClick={() => detailedCard(item.data[0].nasa_id)}>
             <CardMedia
                 component="img"
@@ -74,7 +93,7 @@ export default function MediaCard() {
                 {item && item.data[0].center} • {item && item.data[0].date_created}
                 </Typography>
 
-                <Typography gutterBottom variant="h5" component="div">
+                <Typography className="title-style" gutterBottom variant="h5" component="div">
                   <p>{item && item.data[0].title}</p>
                 </Typography>
                 <Typography className="desc-style" variant="body2" color="text.secondary">
@@ -83,9 +102,11 @@ export default function MediaCard() {
               </CardContent>
             </CardActionArea>
           </Card>
+          </Grid>
+        </Grid>
         </Link>
       ))}
-    </Grid>
+      </ThemeProvider>
     </>
   );
 }
