@@ -5,6 +5,10 @@
 /.pnp
 .pnp.js
 
+#files
+/src/hooks/fetchNewest.txt
+/src/hooks/fetchPopular.txt
+
 # testing
 /coverage
 

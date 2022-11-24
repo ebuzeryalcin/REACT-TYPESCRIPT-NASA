@@ -52,17 +52,21 @@ const ImageTab = ({
     // keywords,
     }: ImageTabProps): JSX.Element => {
   return (
-    <Paper sx={{ overflow: "hidden" }}>
+    <Paper sx={{ overflow: "hidden", minWidth: '260px' }}>
       <Box
         sx={{
           display: "flex",
           flexDirection: {
-            xs: "row",
+            xs: "column",
+            sm: "column",
+            md: "column",
+            lg: "row",
+            xl: "row",
           },
         }}
       >
         <Box minWidth={"50%"} sx={{ display: "inline-grid", flex: "1 1 0%" }}>
-          <CardMedia component="img" image={image} />
+          <CardMedia component="img" image={image} sx={{ maxHeight: '500px' }}/>
         </Box>
         <Box minWidth={"50%"} sx={{ flex: "1 1 0%" }}>
           <CardContent

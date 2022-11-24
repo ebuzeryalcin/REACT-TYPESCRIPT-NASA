@@ -58,7 +58,7 @@ export default function Detailed() {
                 display: "flex",
                 paddingBottom: "16px",
                 flexDirection: {
-                  xs: "row",
+                  xs: "row"
                 },
               }}
             >
@@ -127,7 +127,7 @@ export default function Detailed() {
                 borderBottom: 1,
                 borderColor: "divider",
                 mb: 6,
-                pl: 18,
+                pl: '10vw',
               }}
             >
               <TabList
@@ -143,7 +143,7 @@ export default function Detailed() {
             container
             direction={"column"}
             spacing={2}
-            sx={{ pl: 20, pr: 18, pb: 11 }}
+            sx={{ pl: '10vw', pr: '10vw', pb: '10vw' }}
           >
             {value === "1" && (
               <ImageTab
