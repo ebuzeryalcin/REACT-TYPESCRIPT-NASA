@@ -51,7 +51,7 @@ export default function Detailed() {
                 <HomeIcon />
                 <Typography>NASA Image Explorer</Typography>
               </Link>
-              <Typography>Title</Typography>
+              <Typography>{nasaItem.data[0].title}</Typography>
             </Breadcrumbs>
             <Box
               sx={{
@@ -78,7 +78,7 @@ export default function Detailed() {
                 >
                   <InfoOutlinedIcon />
                 </Box>
-                <Typography>nasa_id</Typography>
+                <Typography>{nasaItem.data[0].nasa_id}</Typography>
               </Box>
               <Box
                 sx={{
@@ -96,7 +96,7 @@ export default function Detailed() {
                 >
                   <HomeIcon />
                 </Box>
-                <Typography>Center</Typography>
+                <Typography>{nasaItem.data[0].center}</Typography>
               </Box>
               <Box
                 sx={{
@@ -114,7 +114,7 @@ export default function Detailed() {
                 >
                   <CalendarMonthOutlinedIcon />
                 </Box>
-                <Typography>MM/DD/YYY</Typography>
+                <Typography>{nasaItem.data[0].date_created}</Typography>
               </Box>
             </Box>
           </Container>
@@ -152,9 +152,13 @@ export default function Detailed() {
                 center={nasaItem.data[0].center}
                 date={nasaItem.data[0].date_created}
                 description={nasaItem.data[0].description}
+                
               />
             )}
-            {value === "2" && <ExifTab />}
+            {value === "2" && (
+              <ExifTab 
+              />
+            )}
           </Grid>
         </Box>
       </Box>

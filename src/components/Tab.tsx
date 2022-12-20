@@ -36,8 +36,7 @@ export default function LabTabs() {
         <Grid item xs={12} sm={4} md={4} sx={{ minWidth: '300px' }}>
           <Search />
         </Grid>
-        <Grid item
-          xs={12}>
+        <Grid item xs={12}>
           <TabContext value={value}>
             <Box sx={{ borderBottom: 1, borderColor: "divider", mb: 6, minWidth: '269px' }}>
               <TabList
