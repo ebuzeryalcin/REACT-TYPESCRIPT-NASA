@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/REACT-TYPESCRIPT-NASA/static/css/main.25d2d9d3.css",
+    "main.js": "/REACT-TYPESCRIPT-NASA/static/js/main.fd520531.js",
+    "index.html": "/REACT-TYPESCRIPT-NASA/index.html",
+    "main.25d2d9d3.css.map": "/REACT-TYPESCRIPT-NASA/static/css/main.25d2d9d3.css.map",
+    "main.fd520531.js.map": "/REACT-TYPESCRIPT-NASA/static/js/main.fd520531.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.25d2d9d3.css",
+    "static/js/main.fd520531.js"
+  ]
+}
